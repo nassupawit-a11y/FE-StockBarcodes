@@ -1,0 +1,38 @@
+<form class="mb-3 gx-0 row justify-content-around" (ngSubmit)="addProductCode(f)" #f="ngForm">
+    <label class="col-sm-2 col-form-label text-center">
+        รหัสสินค้า
+    </label>
+
+    <div class="col-sm-8">
+        <input type="text" class="form-control" ngModel name="code" (input)="onCodeInput($event)"
+            placeholder="XXXX-XXXX-XXXX-XXXX" />
+    </div>
+
+    <button type="submit" class="col-sm-1 btn btn-primary">
+        ADD
+    </button>
+</form>
+<table class="table table-bordered ">
+    <thead class="table-primary">
+        <tr>
+            <th>Id</th>
+            <th>รหัสสินค้า (16 หลัก)</th>
+            <th class="text-center">บาร์โค้ดสินค้า</th>
+            <th class="text-center">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of items; let i = index">
+            <td>{{ item.id }}</td>
+            <td>{{ item.code }}</td>
+            <td>
+                <div class="d-flex justify-content-center align-items-center">
+                    <svg #barcode></svg>
+                </div>
+            </td>
+            <td class="text-center">
+                <button class="btn btn-sm btn-danger">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
