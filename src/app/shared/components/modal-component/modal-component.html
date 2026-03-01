@@ -1,0 +1,10 @@
+<ng-template #modalTemplate>
+    <div class="modal-body py-4 ">
+        ต้องการลบข้อมูล รหัสสินค้า {{ item?.code }} หรือไม่?
+
+        <div class="d-flex align-items-center justify-content-end mt-3">
+            <button class="btn btn-primary me-2" (click)="onConfirm()">ตกลง</button>
+            <button class="btn btn-danger" (click)="onClose()">ยกเลิก</button>
+        </div>
+    </div>
+</ng-template>

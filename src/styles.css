@@ -1,3 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
-
-@import 'tailwindcss';
+:root {
+  --bs-primary: #4e73df;
+  --bs-danger: #e74a3b;
+  --bs-success: #1cc88a;
+  --bs-warning: #f6c23e;
+}
